@@ -57,6 +57,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touchLocation = touches.first?.location(in: sceneView) {
+            // Perform hit-test against all objects in the scene
+            if let hit = sceneView.hitTest(touchLocation, options: nil).first {
+                
+                // Remove the node
+                hit.node.removeFromParentNode()
+                return;
+            }
+        }
+        
         guard let touch = touches.first else { return }
         let results = sceneView.hitTest(touch.location(in: sceneView), types: [ARHitTestResult.ResultType.featurePoint])
         guard let hitFeature = results.last else { return }
@@ -66,6 +76,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                                          hitTransform.m43)
         let treeClone = treeNode!.clone()
         treeClone.position = hitPosition
+        
+        /*
+        // Create a LookAt constraint, point at the cameras POV
+        let constraint = SCNLookAtConstraint(target: sceneView.pointOfView)
+        
+        // Keep the rotation on the horizon
+        constraint.isGimbalLockEnabled = true
+        
+        // Slow the constraint down a bit
+        constraint.influenceFactor = 0.01
+        
+        // Finally add the constraint to the node
+        treeClone.constraints = [constraint] 
+         */
+ 
         sceneView.scene.rootNode.addChildNode(treeClone)
     }
 
