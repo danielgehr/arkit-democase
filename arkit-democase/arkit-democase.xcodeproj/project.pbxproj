@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8205E05E1F43327B00186D98 /* main.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8205E05D1F43327B00186D98 /* main.scn */; };
 		82CB4F491F41E74D00DC0788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CB4F481F41E74D00DC0788 /* AppDelegate.swift */; };
 		82CB4F4B1F41E74D00DC0788 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 82CB4F4A1F41E74D00DC0788 /* art.scnassets */; };
 		82CB4F4D1F41E74D00DC0788 /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CB4F4C1F41E74D00DC0788 /* TreeViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8205E05D1F43327B00186D98 /* main.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = main.scn; path = art.scnassets/main.scn; sourceTree = "<group>"; };
 		82CB4F451F41E74D00DC0788 /* arkit-democase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "arkit-democase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CB4F481F41E74D00DC0788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82CB4F4A1F41E74D00DC0788 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				82CB4F561F41E74D00DC0788 /* Info.plist */,
 				82CB4F4A1F41E74D00DC0788 /* art.scnassets */,
 				82CB4F511F41E74D00DC0788 /* Assets.xcassets */,
+				8205E05D1F43327B00186D98 /* main.scn */,
 			);
 			path = "arkit-democase";
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8205E05E1F43327B00186D98 /* main.scn in Resources */,
 				82CB4F4B1F41E74D00DC0788 /* art.scnassets in Resources */,
 				82CB4F551F41E74D00DC0788 /* LaunchScreen.storyboard in Resources */,
 				82CB4F521F41E74D00DC0788 /* Assets.xcassets in Resources */,

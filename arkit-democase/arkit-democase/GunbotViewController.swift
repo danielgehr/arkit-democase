@@ -9,12 +9,17 @@
 import UIKit
 import ARKit
 
-class GunbotViewController: UIViewController {
+class GunbotViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let scene = SCNScene(named: "art.scnassets/main.scn")!
+        sceneView.scene = scene
+        
+        sceneView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
